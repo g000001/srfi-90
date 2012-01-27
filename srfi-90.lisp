@@ -4,7 +4,7 @@
 (define-function make-table
   (lambda* ((:test        test        #'equal?)
             (:hash        hash        #'srfi-69:hash)
-            (:size        size        0)
+            (:size        size        srfi-69.internal::*default-table-size*)
             (:min-load    min-load    0)
             (:max-load    max-load    1)
             (:weak-keys   weak-keys   nil)
