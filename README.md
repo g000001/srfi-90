@@ -1,5 +1,6 @@
-* SRFI-90: Extensible hash table constructor
-Copyright (C) Marc Feeley (2006). All Rights Reserved.
+# SRFI 90 for CL: Extensible hash table constructor
+
+* Copyright (C) Marc Feeley (2006). All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

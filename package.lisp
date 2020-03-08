@@ -1,12 +1,29 @@
 ;;;; package.lisp
 
-(cl:in-package :cl-user)
+(cl:in-package cl-user)
 
-(defpackage :srfi-90
+
+(defpackage "https://github.com/g000001/srfi-90"
   (:use)
-  (:export :make-table))
+  (:export make-table)
+  (:size 1))
 
-(defpackage :srfi-90.internal
-  (:use :srfi-90 :cl :fiveam :srfi-89)
-  (:shadow :lambda))
 
+(defpackage "https://github.com/g000001/srfi-90#internals"
+  (:use
+   "https://github.com/g000001/srfi-90"
+   "https://github.com/g000001/srfi-89"
+   "https://github.com/g000001/srfi-69"
+   cl 
+   fiveam)
+  (:shadow lambda)
+  (:shadowing-import-from
+   "https://github.com/g000001/srfi-69"
+   make-hash-table
+   hash-table-size)
+  (:shadowing-import-from
+   "https://github.com/g000001/srfi-69#internals"
+   *default-table-size*
+   hash-table-entries))
+
+;;; *EOF*
